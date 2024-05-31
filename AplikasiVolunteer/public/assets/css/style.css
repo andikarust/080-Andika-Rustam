@@ -1,0 +1,105 @@
+.navbar {
+    background-color: #b81414;
+}
+
+.navbar-brand {
+    font-weight: 750;
+    color: whitesmoke;
+    font-size: 24px;
+    transition: 0.3s color;
+    margin-left: 50px;
+}
+
+.navbar-brand:hover, .navbar-brand:active {
+    color: white;
+}
+
+.login-button {
+    background-color: #b81414;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color: whitesmoke;
+    color: #b81414;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: whitesmoke;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: whitesmoke;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/* .carousel-item img{
+    width: 100%;
+    height: 100vh;
+} */
+
+
+.info-box-wrapper {
+    border-radius: 20px;
+}
+
+.info-box {
+    border-right: 2px solid #D7292E;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.info-box:last-child {
+    border-right: unset;
+}
+
+.info-box h1,
+.info-box h5 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.info-box h1 {
+    font-weight: bold;
+    color: #D7292E;
+}
+    
+footer {
+        background-color: rgba(189,189,189,.8);
+}

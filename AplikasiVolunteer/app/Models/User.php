@@ -16,11 +16,44 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $primaryKey = 'id';
     protected $fillable = [
-        'name',
+        'nama',
         'email',
         'password',
+        'alamat',
+        'no_telepon',
+        'tgl_lahir',
+        'jenis_kelamin',
+        'role'
+
     ];
+
+    public function status()
+    {
+        return $this->hasMany(Status::class);
+    }
+    public function organization()
+    {
+        return $this->hasOne(Organization::class, 'id_user');
+    }
+
+    // untuk menentukan role
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+    
+    public function isRelawan()
+    {
+        return $this->role === 'relawan';
+    }
+    
+    public function isOrganisasi()
+    {
+        return $this->role === 'organisasi';
+    }
 
     /**
      * The attributes that should be hidden for serialization.
